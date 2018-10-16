@@ -142,11 +142,6 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
   //predict
   ekf_.Predict();
 
-  //measurement update
-  ekf_.Update(measurement_pack.raw_measurements_);
-
-  ekf_.Predict();
-
   /*****************************************************************************
    *  Update
    ****************************************************************************/
@@ -172,6 +167,6 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
   }
 
   // print the output
-  cout << "x_ = " << ekf_.x_ << endl;
-  cout << "P_ = " << ekf_.P_ << endl;
+  //cout << "x_ = " << ekf_.x_ << endl;
+  //cout << "P_ = " << ekf_.P_ << endl;
 }
